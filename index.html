@@ -1,213 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PDF Fit</title>
+    <meta charset="UTF-8">
 
-<style>
-body{
-    margin:0;
-    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",sans-serif;
-    background:#f5f5f7;
-    color:#1d1d1f;
-}
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:60px 24px;
-}
+    <meta
+        name="description"
+        content="PDF Fit makes it easy to compress PDFs to fit your selected file size, scan documents, create PDFs from photos, and process everything privately on your device."
+    >
 
-header{
-    text-align:center;
-    margin-bottom:60px;
-}
+    <title>PDF Fit</title>
 
-.logo{
-    width:120px;
-    height:120px;
-    border-radius:28px;
-    box-shadow:0 8px 30px rgba(0,0,0,.12);
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-h1{
-    margin-top:24px;
-    font-size:48px;
-    font-weight:700;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.subtitle{
-    font-size:22px;
-    color:#6e6e73;
-    margin-top:12px;
-}
+        body {
+            margin: 0;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "SF Pro Display",
+                "SF Pro Text",
+                "Helvetica Neue",
+                Arial,
+                sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            -webkit-font-smoothing: antialiased;
+        }
 
-.section{
-    background:white;
-    border-radius:24px;
-    padding:36px;
-    margin-bottom:28px;
-    box-shadow:0 4px 18px rgba(0,0,0,.05);
-}
+        a {
+            color: #0071e3;
+            text-decoration: none;
+        }
 
-h2{
-    margin-top:0;
-    font-size:28px;
-}
+        a:hover {
+            text-decoration: underline;
+        }
 
-p{
-    font-size:18px;
-    line-height:1.7;
-    color:#424245;
-}
+        .container {
+            width: 100%;
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 56px 24px 40px;
+        }
 
-ul{
-    padding-left:22px;
-}
+        .hero {
+            text-align: center;
+            padding: 28px 0 52px;
+        }
 
-li{
-    margin-bottom:14px;
-    font-size:18px;
-    line-height:1.6;
-}
+        .app-icon {
+            width: 175px;
+            height: 175px;
+            object-fit: cover;
+            border-radius: 29px;
+            box-shadow:
+                0 14px 34px rgba(0, 0, 0, 0.13),
+                0 2px 8px rgba(0, 0, 0, 0.08);
+        }
 
-footer{
-    text-align:center;
-    margin-top:60px;
-    color:#6e6e73;
-    font-size:15px;
-}
+        .hero h1 {
+            margin: 24px 0 10px;
+            font-size: 52px;
+            line-height: 1.05;
+            letter-spacing: -1.5px;
+            font-weight: 750;
+        }
 
-a{
-    color:#0071e3;
-    text-decoration:none;
-}
+        .hero-subtitle {
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 23px;
+            line-height: 1.45;
+            color: #6e6e73;
+        }
 
-a:hover{
-    text-decoration:underline;
-}
-</style>
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 36px;
+            margin-bottom: 28px;
+            box-shadow:
+                0 4px 18px rgba(0, 0, 0, 0.045),
+                0 1px 2px rgba(0, 0, 0, 0.025);
+        }
+
+        .card h2 {
+            margin: 0 0 22px;
+            font-size: 30px;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .card h3 {
+            margin: 34px 0 12px;
+            font-size: 21px;
+            line-height: 1.3;
+        }
+
+        .card p {
+            margin: 0 0 20px;
+            font-size: 18px;
+            line-height: 1.72;
+            color: #424245;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .features-list {
+            margin: 0;
+            padding-left: 23px;
+        }
+
+        .features-list li {
+            margin-bottom: 13px;
+            padding-left: 3px;
+            font-size: 18px;
+            line-height: 1.58;
+            color: #2f2f32;
+        }
+
+        .features-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            font-weight: 650;
+            color: #1d1d1f;
+        }
+
+        .privacy-date {
+            color: #6e6e73;
+            font-size: 16px !important;
+        }
+
+        .support {
+            text-align: center;
+            padding: 44px 20px 18px;
+        }
+
+        .support h2 {
+            margin: 0 0 14px;
+            font-size: 30px;
+            line-height: 1.2;
+        }
+
+        .support p {
+            max-width: 650px;
+            margin: 0 auto 16px;
+            font-size: 18px;
+            line-height: 1.65;
+            color: #424245;
+        }
+
+        .support-email {
+            display: inline-block;
+            margin-top: 4px;
+            font-size: 20px;
+            font-weight: 550;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            padding: 26px 0 12px;
+            text-align: center;
+            color: #86868b;
+            font-size: 15px;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 34px 16px 28px;
+            }
+
+            .hero {
+                padding: 18px 0 38px;
+            }
+
+            .app-icon {
+                width: 112px;
+                height: 112px;
+                border-radius: 25px;
+            }
+
+            .hero h1 {
+                margin-top: 20px;
+                font-size: 42px;
+            }
+
+            .hero-subtitle {
+                font-size: 19px;
+            }
+
+            .card {
+                padding: 26px 22px;
+                border-radius: 21px;
+                margin-bottom: 20px;
+            }
+
+            .card h2 {
+                font-size: 27px;
+            }
+
+            .card h3 {
+                font-size: 20px;
+            }
+
+            .card p,
+            .features-list li {
+                font-size: 17px;
+            }
+
+            .support {
+                padding-top: 34px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <main class="container">
 
-<div class="container">
+        <header class="hero">
+            <img
+                src="app-icon.png"
+                class="app-icon"
+                alt="PDF Fit app icon"
+            >
 
-<header>
+            <h1>PDF Fit</h1>
 
-<img src="app-icon.png" class="logo" alt="PDF Fit">
+            <p class="hero-subtitle">
+                Compress PDFs to fit your selected file size.
+            </p>
+        </header>
 
-<h1>PDF Fit</h1>
 
-<div class="subtitle">
-Compress PDFs to fit your selected file size.
-</div>
+        <section class="card" aria-labelledby="overview-title">
+            <h2 id="overview-title">Overview</h2>
 
-</header>
+            <p>
+                PDF Fit makes it easy to compress PDFs to fit your selected file size while preserving the best achievable document quality.
+            </p>
 
-<div class="section">
+            <p>
+                Simply import or create a PDF, scan a paper document, or add photos, choose your target file size, and let PDF Fit do the rest.
+            </p>
 
-<h2>Overview</h2>
+            <p>
+                Intelligent Compression automatically analyzes each page to optimize compression for text, mixed content, and photos, delivering the best possible balance between quality and file size.
+            </p>
 
-<p>
-PDF Fit makes it easy to compress PDFs to fit your selected file size while preserving the best achievable document quality.
-</p>
+            <p>
+                Professional Scan automatically detects document boundaries, corrects perspective, optimizes readability, and creates each PDF page in the detected format while preserving content near the edges.
+            </p>
 
-<p>
-Simply import or create a PDF, scan a paper document, or add photos, choose your target file size, and let PDF Fit do the rest.
-</p>
+            <p>
+                Import photos and create clean, professional PDFs with automatic page sizing, preserved proportions, and document-aware optimization.
+            </p>
 
-<p>
-Whether you need to reduce a PDF for online submission, email attachments, or file size limits, PDF Fit makes PDF compression fast, simple, and reliable.
-</p>
+            <p>
+                Whether you need to reduce a PDF for online submission, email attachments, or file size limits, PDF Fit makes PDF compression fast, simple, and reliable.
+            </p>
 
-</div>
+            <p>
+                Built-in file size presets for email attachments, messaging apps, visa applications, job applications, and more make it easy to choose the right file size in seconds.
+            </p>
+        </section>
 
-<div class="section">
 
-<h2>Features</h2>
+        <section class="card" aria-labelledby="features-title">
+            <h2 id="features-title">Features</h2>
 
-<ul>
+            <ul class="features-list">
+                <li>Compress PDFs to fit your selected file size limit</li>
+                <li>Intelligent Compression with the best possible document quality</li>
+                <li>Import or create PDFs</li>
+                <li>Scan paper documents using your camera</li>
+                <li>Import photos and create clean, professional PDFs with automatic page sizing</li>
+                <li>Advanced document detection</li>
+                <li>Automatic perspective correction</li>
+                <li>Automatic page format detection</li>
+                <li>Built-in file size presets</li>
+                <li>Preview PDFs before saving or sharing</li>
+                <li>Rename PDFs before saving or sharing</li>
+                <li>Save PDFs to Files</li>
+                <li>Share PDFs using the iOS Share Sheet</li>
+                <li>Fast, private on-device processing</li>
+                <li>No subscriptions</li>
+            </ul>
+        </section>
 
-<li>Compress PDFs to fit your selected file size limit</li>
 
-<li>Intelligent Compression with the best possible document quality</li>
+        <section class="card" aria-labelledby="lifetime-title">
+            <h2 id="lifetime-title">Lifetime Pro</h2>
 
-<li>Import or create PDFs</li>
+            <p>
+                Unlock unlimited PDF exports, PDF compression, document scanning, and PDF creation from Photos with a one-time purchase. No subscriptions.
+            </p>
+        </section>
 
-<li>Scan paper documents using your camera</li>
 
-<li>Import photos and create clean, professional PDFs with automatic page sizing</li>
+        <section
+            class="card"
+            id="privacy"
+            aria-labelledby="privacy-title"
+        >
+            <h2 id="privacy-title">Privacy Policy</h2>
 
-<li>Advanced document detection</li>
+            <p class="privacy-date">
+                <strong>Last updated: July 14, 2026</strong>
+            </p>
 
-<li>Automatic perspective correction</li>
+            <p>
+                PDF Fit is designed to process documents privately on your device. This Privacy Policy explains how PDF Fit handles information when you use the app.
+            </p>
 
-<li>Automatic page format detection</li>
+            <h3>Data Collection</h3>
 
-<li>Built-in file size presets</li>
+            <p>
+                PDF Fit does not collect, store, transmit, sell, or share personal data.
+            </p>
 
-<li>Preview PDFs before saving or sharing</li>
+            <p>
+                The app does not require an account and does not collect names, email addresses, contact information, device identifiers, location data, advertising data, tracking information, or the contents of your documents and photos.
+            </p>
 
-<li>Rename PDFs before saving or sharing</li>
+            <h3>Document Processing</h3>
 
-<li>Save PDFs to Files</li>
+            <p>
+                PDF files, scanned documents, and photos selected in PDF Fit are processed entirely on your device.
+            </p>
 
-<li>Share PDFs using the iOS Share Sheet</li>
+            <p>
+                Your documents and images are not uploaded to PDF Fit servers or to any external server operated by the developer.
+            </p>
 
-<li>Fast, private on-device processing</li>
+            <p>
+                PDF Fit does not retain copies of your imported PDFs, scans, photos, or exported documents on developer-controlled servers.
+            </p>
 
-<li>No subscriptions</li>
+            <h3>Camera Access</h3>
 
-</ul>
+            <p>
+                PDF Fit may request access to your device camera when you choose to scan a paper document.
+            </p>
 
-</div>
+            <p>
+                Camera access is used only to capture the documents you choose to scan. Captured pages are processed locally on your device and are not transmitted to the developer.
+            </p>
 
-<div class="section">
+            <h3>Photo Library Access</h3>
 
-<h2>Lifetime Pro</h2>
+            <p>
+                PDF Fit may request access to photos when you choose to create a PDF from images.
+            </p>
 
-<p>
-Unlock unlimited PDF exports, PDF compression, document scanning, and PDF creation from Photos with a one-time purchase.
-</p>
+            <p>
+                Photo access is used only for the images you select. PDF Fit does not upload your photos to developer-controlled servers.
+            </p>
 
-<p>
-No subscriptions.
-</p>
+            <h3>Files Access</h3>
 
-</div>
+            <p>
+                PDF Fit accesses a PDF or storage location only when you select it through Apple’s document picker, Files interface, or Share Sheet.
+            </p>
 
-<div class="section">
+            <p>
+                The app uses the selected file only to perform the action requested by you, such as previewing, compressing, renaming, saving, or sharing the PDF.
+            </p>
 
-<h2>Privacy</h2>
+            <h3>Saved and Shared Files</h3>
 
-<p>
-PDF Fit processes all documents entirely on your device.
-</p>
+            <p>
+                Files are saved only when you choose to save or export them through Apple’s Files interface or another available system option.
+            </p>
 
-<p>
-Your PDFs are never uploaded to external servers.
-</p>
+            <p>
+                When you share a document using the iOS Share Sheet, the selected third-party app or service may process the file according to its own privacy policy. PDF Fit does not control the privacy practices of third-party apps or services selected by you.
+            </p>
 
-</div>
+            <h3>In-App Purchases</h3>
 
-<footer>
+            <p>
+                Lifetime Pro purchases are processed by Apple through the App Store.
+            </p>
 
-<p>
-© 2026 PDF Fit
-</p>
+            <p>
+                PDF Fit does not receive or store your payment card details. Apple may provide the app with purchase status information required to unlock or restore Lifetime Pro.
+            </p>
 
-<p>
-Support:
-<a href="mailto:octavianpetrescu2025@yahoo.com">
-octavianpetrescu2025@yahoo.com
-</a>
-</p>
+            <p>
+                App Store purchases are processed according to Apple’s applicable terms and privacy policies.
+            </p>
 
-</footer>
+            <h3>Analytics, Advertising, and Tracking</h3>
 
-</div>
+            <p>
+                PDF Fit does not use third-party advertising, cross-app tracking, profiling tools, or tracking technologies.
+            </p>
 
+            <p>
+                The app does not track you across apps or websites and does not use your information for advertising purposes.
+            </p>
+
+            <h3>Third-Party Services</h3>
+
+            <p>
+                PDF Fit does not upload documents to third-party cloud processing or artificial intelligence services.
+            </p>
+
+            <p>
+                System features provided by Apple, including the camera, Photos picker, Files picker, Share Sheet, and App Store purchase system, may operate under Apple’s applicable terms and privacy policies.
+            </p>
+
+            <h3>Children’s Privacy</h3>
+
+            <p>
+                PDF Fit does not knowingly collect personal information from children or from any other users.
+            </p>
+
+            <h3>Data Retention and Deletion</h3>
+
+            <p>
+                Because PDF Fit does not collect or store personal data on developer-controlled servers, there is no personal account data for the developer to retain or delete.
+            </p>
+
+            <p>
+                You remain in control of the PDFs, photos, scans, and exported files stored on your device and may delete them at any time using the relevant Apple apps or storage locations.
+            </p>
+
+            <h3>Security</h3>
+
+            <p>
+                On-device processing is used to reduce the exposure of your documents to external systems. You are responsible for securing your device, backups, shared files, and selected storage destinations.
+            </p>
+
+            <h3>Changes to This Privacy Policy</h3>
+
+            <p>
+                This Privacy Policy may be updated if PDF Fit’s functionality or data-handling practices change. Any updated policy will be published on this page with a revised “Last updated” date.
+            </p>
+
+            <h3>Contact</h3>
+
+            <p>
+                For privacy questions or support, contact:
+            </p>
+
+            <p>
+                <a href="mailto:octavianpetrescu2025@yahoo.com">
+                    octavianpetrescu2025@yahoo.com
+                </a>
+            </p>
+        </section>
+
+
+        <section class="support" aria-labelledby="support-title">
+            <h2 id="support-title">Support</h2>
+
+            <p>
+                Need help? If you have any questions, feedback, or need assistance, feel free to contact us.
+            </p>
+
+            <a
+                class="support-email"
+                href="mailto:octavianpetrescu2025@yahoo.com"
+            >
+                octavianpetrescu2025@yahoo.com
+            </a>
+        </section>
+
+
+        <footer>
+            © 2026 PDF Fit
+        </footer>
+
+    </main>
 </body>
 </html>
