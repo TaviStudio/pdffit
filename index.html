@@ -1,287 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>PDF Fit Support</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF Fit</title>
 
 <style>
-
-*{
-    box-sizing:border-box;
-}
-
 body{
     margin:0;
-    background:#ffffff;
-    color:#111111;
-    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;
-    -webkit-font-smoothing:antialiased;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",sans-serif;
+    background:#f5f5f7;
+    color:#1d1d1f;
 }
 
 .container{
     max-width:900px;
     margin:auto;
-    padding:70px 24px;
-    text-align:center;
+    padding:60px 24px;
 }
 
-img{
-    width:180px;
-    border-radius:40px;
-    margin-bottom:34px;
+header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.logo{
+    width:120px;
+    height:120px;
+    border-radius:28px;
+    box-shadow:0 8px 30px rgba(0,0,0,.12);
 }
 
 h1{
-    margin:0;
+    margin-top:24px;
     font-size:48px;
     font-weight:700;
-    letter-spacing:-0.02em;
 }
 
 .subtitle{
-
-    max-width:720px;
-    margin:24px auto 0;
     font-size:22px;
-    line-height:1.65;
-    color:#555555;
-
+    color:#6e6e73;
+    margin-top:12px;
 }
 
-.card{
-
-    margin-top:48px;
-    padding:42px;
-
-    border:1px solid #ececec;
-    border-radius:26px;
-
-    background:#ffffff;
-
+.section{
+    background:white;
+    border-radius:24px;
+    padding:36px;
+    margin-bottom:28px;
+    box-shadow:0 4px 18px rgba(0,0,0,.05);
 }
 
 h2{
-
-    margin:0 0 24px;
-    font-size:30px;
-    font-weight:700;
-
+    margin-top:0;
+    font-size:28px;
 }
 
 p{
-
-    margin:18px auto;
-    max-width:620px;
-
-    font-size:20px;
-    line-height:1.75;
-
+    font-size:18px;
+    line-height:1.7;
+    color:#424245;
 }
 
-.email{
+ul{
+    padding-left:22px;
+}
 
-    font-size:20px;
-    font-weight:600;
+li{
+    margin-bottom:14px;
+    font-size:18px;
+    line-height:1.6;
+}
 
-    word-break:break-word;
-
+footer{
+    text-align:center;
+    margin-top:60px;
+    color:#6e6e73;
+    font-size:15px;
 }
 
 a{
-
-    color:#007AFF;
+    color:#0071e3;
     text-decoration:none;
-
 }
 
 a:hover{
-
     text-decoration:underline;
-
 }
-
-ul{
-
-    max-width:470px;
-
-    margin:auto;
-
-    padding-left:26px;
-
-    text-align:left;
-
-    font-size:20px;
-    line-height:2;
-
-}
-
-.footer{
-
-    margin-top:70px;
-
-    color:#8E8E93;
-
-    font-size:16px;
-
-}
-
-@media (max-width:700px){
-
-h1{
-    font-size:38px;
-}
-
-.subtitle{
-    font-size:20px;
-}
-
-h2{
-    font-size:26px;
-}
-
-p,
-ul{
-
-    font-size:18px;
-
-}
-
-.card{
-
-    padding:32px 24px;
-
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-<img src="app-icon.png" alt="PDF Fit">
+<header>
+
+<img src="icon.png" class="logo" alt="PDF Fit">
 
 <h1>PDF Fit</h1>
 
 <div class="subtitle">
+Compress PDFs to fit your selected file size.
+</div>
 
-PDF Fit makes it easy to compress PDF files while optimizing document quality within your selected file size.<br><br>
+</header>
 
-Simply import or create a PDF, scan paper documents or add photos, choose your target file size, and let PDF Fit do the rest.
+<div class="section">
+
+<h2>Overview</h2>
+
+<p>
+PDF Fit makes it easy to compress PDFs to fit your selected file size while preserving the best achievable document quality.
+</p>
+
+<p>
+Simply import or create a PDF, scan a paper document, or add photos, choose your target file size, and let PDF Fit do the rest.
+</p>
+
+<p>
+Whether you need to reduce a PDF for online submission, email attachments, or file size limits, PDF Fit makes PDF compression fast, simple, and reliable.
+</p>
 
 </div>
 
-<div class="card">
+<div class="section">
 
 <h2>Features</h2>
 
 <ul>
 
-<li>Compress PDFs to fit your selected file size</li>
+<li>Compress PDFs to fit your selected file size limit</li>
 
-<li>Import existing PDF documents</li>
+<li>Intelligent Compression with the best possible document quality</li>
 
-<li>Create PDFs from documents and photos</li>
+<li>Import or create PDFs</li>
 
-<li>Scan paper documents</li>
+<li>Scan paper documents using your camera</li>
+
+<li>Import photos and create clean, professional PDFs with automatic page sizing</li>
+
+<li>Advanced document detection</li>
 
 <li>Automatic perspective correction</li>
 
-<li>Intelligent document detection</li>
+<li>Automatic page format detection</li>
 
-<li>Fast and accurate PDF compression</li>
+<li>Built-in file size presets</li>
 
-<li>High-quality PDF output</li>
+<li>Preview PDFs before saving or sharing</li>
+
+<li>Rename PDFs before saving or sharing</li>
+
+<li>Save PDFs to Files</li>
+
+<li>Share PDFs using the iOS Share Sheet</li>
+
+<li>Fast, private on-device processing</li>
+
+<li>No subscriptions</li>
 
 </ul>
 
 </div>
 
-<div class="card">
+<div class="section">
 
-<h2>Privacy Policy</h2>
+<h2>Lifetime Pro</h2>
 
 <p>
-
-PDF Fit respects your privacy.
-
+Unlock unlimited PDF exports, PDF compression, document scanning, and PDF creation from Photos with a one-time purchase.
 </p>
 
 <p>
-
-All PDF creation, document scanning, photo processing and PDF compression are performed entirely on your device.
-
-</p>
-
-<p>
-
-The app does not collect, store, transmit or share your documents, photos or personal data.
-
-</p>
-
-<p>
-
-No uploaded files, scanned documents or imported photos are sent to external servers.
-
-</p>
-
-<p>
-
-All processing remains on your device and your data stays under your control.
-
-</p>
-
-<p>
-
-If you have any privacy-related questions, please contact us using the email address below.
-
+No subscriptions.
 </p>
 
 </div>
 
-<div class="card">
+<div class="section">
 
-<h2>Support</h2>
+<h2>Privacy</h2>
 
 <p>
-
-Need help, have a question or want to report a bug?
-
+PDF Fit processes all documents entirely on your device.
 </p>
 
 <p>
-
-Contact us anytime:
-
+Your PDFs are never uploaded to external servers.
 </p>
 
-<p class="email">
+</div>
 
+<footer>
+
+<p>
+© 2026 PDF Fit
+</p>
+
+<p>
+Support:
 <a href="mailto:octavianpetrescu2025@yahoo.com">
-
 octavianpetrescu2025@yahoo.com
-
 </a>
-
 </p>
 
-</div>
-
-<div class="footer">
-
-© 2026 TaviStudio. All rights reserved.
-
-</div>
+</footer>
 
 </div>
 
 </body>
-
 </html>
