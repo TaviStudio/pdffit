@@ -13,6 +13,8 @@
         content="PDF Fit makes it easy to compress PDFs to fit your selected file size, scan documents, create PDFs from photos, and process everything privately on your device."
     >
 
+    <link rel="canonical" href="https://tavistudio.github.io/pdffit/">
+
     <title>PDF Fit</title>
 
     <style>
@@ -46,6 +48,12 @@
 
         a:hover {
             text-decoration: underline;
+        }
+
+        a:focus-visible {
+            outline: 3px solid rgba(0, 113, 227, 0.35);
+            outline-offset: 4px;
+            border-radius: 4px;
         }
 
         .container {
@@ -137,9 +145,8 @@
             margin-bottom: 0;
         }
 
-        .highlight {
-            font-weight: 650;
-            color: #1d1d1f;
+        #privacy {
+            scroll-margin-top: 24px;
         }
 
         .privacy-date {
@@ -167,8 +174,9 @@
         }
 
         .support-email {
-            display: inline-block;
-            margin-top: 4px;
+            display: block;
+            width: fit-content;
+            margin: 6px auto 0;
             font-size: 20px;
             font-weight: 550;
             overflow-wrap: anywhere;
@@ -261,7 +269,7 @@
             </p>
 
             <p>
-                Intelligent Compression automatically analyzes each page to optimize compression for text, mixed content, and photos, delivering the best possible balance between quality and file size.
+                Intelligent Compression automatically analyzes each page to optimize compression for text, mixed content, and photos, delivering the best achievable balance between quality and file size.
             </p>
 
             <p>
@@ -286,8 +294,8 @@
             <h2 id="features-title">Features</h2>
 
             <ul class="features-list">
-                <li>Compress PDFs to fit your selected file size limit</li>
-                <li>Intelligent Compression with the best possible document quality</li>
+                <li>Compress PDFs to fit your selected file size</li>
+                <li>Intelligent Compression for the best achievable document quality</li>
                 <li>Import or create PDFs</li>
                 <li>Scan paper documents using your camera</li>
                 <li>Import photos and create clean, professional PDFs with automatic page sizing</li>
@@ -300,7 +308,6 @@
                 <li>Save PDFs to Files</li>
                 <li>Share PDFs using the iOS Share Sheet</li>
                 <li>Fast, private on-device processing</li>
-                <li>No subscriptions</li>
             </ul>
         </section>
 
@@ -309,7 +316,7 @@
             <h2 id="lifetime-title">Lifetime Pro</h2>
 
             <p>
-                Unlock unlimited PDF exports, PDF compression, document scanning, and PDF creation from Photos with a one-time purchase. No subscriptions.
+                Unlock unlimited exports of compressed PDFs, scanned documents, and PDFs created from photos with a one-time purchase. No subscriptions.
             </p>
         </section>
 
@@ -320,7 +327,11 @@
             aria-labelledby="privacy-title"
         >
             <h2 id="privacy-title">Privacy Policy</h2>
-            
+
+            <p class="privacy-date">
+                Last updated: July 15, 2026
+            </p>
+
             <p>
                 PDF Fit is designed to process documents privately on your device. This Privacy Policy explains how PDF Fit handles information when you use the app.
             </p>
@@ -328,65 +339,69 @@
             <h3>Data Collection</h3>
 
             <p>
-                PDF Fit does not collect, store, transmit, sell, or share personal data.
+                PDF Fit does not collect or transmit your personal data or document contents to the developer through the app, and it does not sell or share that information or store it on developer-controlled servers.
             </p>
 
             <p>
-                The app does not require an account and does not collect names, email addresses, contact information, device identifiers, location data, advertising data, tracking information, or the contents of your documents and photos.
+                The app does not require an account and does not collect names, email addresses, contact information, device identifiers, location data, advertising data, tracking information, or the contents of your documents and photos through the app.
             </p>
 
-            <h3>Document Processing</h3>
+            <h3>On-Device Processing and Local Storage</h3>
 
             <p>
                 PDF files, scanned documents, and photos selected in PDF Fit are processed entirely on your device.
             </p>
 
             <p>
-                Your documents and images are not uploaded to PDF Fit servers or to any external server operated by the developer.
+                To perform the actions you request and recover work after an interruption, PDF Fit may temporarily store working copies and a pending compression result in the app’s private local storage. These files remain on your device and are removed when the related work is cleared or replaced.
             </p>
 
             <p>
-                PDF Fit does not retain copies of your imported PDFs, scans, photos, or exported documents on developer-controlled servers.
+                PDF Fit stores limited app state locally on your device, such as your free export count and Lifetime Pro entitlement status. This information is used only to provide the app’s export allowance and purchase features and is not sent to the developer.
+            </p>
+
+            <p>
+                Your documents and images are not uploaded to PDF Fit servers or to any external server operated by the developer.
             </p>
 
             <h3>Camera Access</h3>
 
             <p>
-                PDF Fit may request access to your device camera when you choose to scan a paper document.
+                PDF Fit requests access to your device camera only when you choose to scan a paper document.
             </p>
 
             <p>
                 Camera access is used only to capture the documents you choose to scan. Captured pages are processed locally on your device and are not transmitted to the developer.
             </p>
 
-            <h3>Photo Library Access</h3>
+            <h3>Photo Selection</h3>
 
             <p>
-                PDF Fit may request access to photos when you choose to create a PDF from images.
+                PDF Fit uses Apple’s Photos picker to access only the images you explicitly select when you choose to create a PDF from photos. The app does not request unrestricted access to your photo library.
             </p>
 
             <p>
-                Photo access is used only for the images you select. PDF Fit does not upload your photos to developer-controlled servers.
+                Selected images are processed locally on your device and are not uploaded to developer-controlled servers.
             </p>
 
             <h3>Files Access</h3>
 
             <p>
-                PDF Fit accesses a PDF or storage location only when you select it through Apple’s document picker, Files interface, or Share Sheet.
+                PDF Fit accesses a PDF only when you select it through Apple’s document picker. The selected file is used only to perform the action you request, such as previewing, compressing, or renaming the PDF.
             </p>
 
             <p>
-                The app uses the selected file only to perform the action requested by you, such as previewing, compressing, renaming, saving, or sharing the PDF.
+                When you choose to save a PDF, Apple’s Files interface lets you select the storage location. PDF Fit does not access other files or folders that you have not selected.
             </p>
 
             <h3>Saved and Shared Files</h3>
 
             <p>
-                Files are saved only when you choose to save or export them through Apple’s Files interface or another available system option.
+                Files are saved or exported only when you choose to do so. Exported files remain in the destination you select until you delete them.
             </p>
 
             <p>
-                When you share a document using the iOS Share Sheet, the selected third-party app or service may process the file according to its own privacy policy. PDF Fit does not control the privacy practices of third-party apps or services selected by you.
+                When you share a document using the iOS Share Sheet, the third-party app or service you select may process the file according to its own privacy policy. PDF Fit does not control the privacy practices of third-party apps or services selected by you.
             </p>
 
             <h3>In-App Purchases</h3>
@@ -406,11 +421,17 @@
             <h3>Analytics, Advertising, and Tracking</h3>
 
             <p>
-                PDF Fit does not use third-party advertising, cross-app tracking, profiling tools, or tracking technologies.
+                PDF Fit does not use third-party analytics, advertising, cross-app tracking, profiling tools, or tracking technologies.
             </p>
 
             <p>
                 The app does not track you across apps or websites and does not use your information for advertising purposes.
+            </p>
+
+            <h3>Support Communications</h3>
+
+            <p>
+                If you voluntarily contact the developer by email, the developer receives the email address, message content, and any information you choose to include. This information is used only to respond to your request, provide support, and maintain necessary support records. It is not sold or used for advertising or tracking.
             </p>
 
             <h3>Third-Party Services</h3>
@@ -420,7 +441,7 @@
             </p>
 
             <p>
-                System features provided by Apple, including the camera, Photos picker, Files picker, Share Sheet, and App Store purchase system, may operate under Apple’s applicable terms and privacy policies.
+                System features provided by Apple, including the camera, Photos picker, document picker, Files interface, Share Sheet, and App Store purchase system, may operate under Apple’s applicable terms and privacy policies.
             </p>
 
             <h3>Data Retention and Deletion</h3>
@@ -430,15 +451,26 @@
             </p>
 
             <p>
-                You remain in control of the PDFs, photos, scans, and exported files stored on your device and may delete them at any time using the relevant Apple apps or storage locations.
+                You remain in control of the PDFs, photos, scans, and exported files stored on your device and may delete them at any time using PDF Fit or the relevant Apple apps and storage locations. Uninstalling PDF Fit removes data stored in the app’s private local storage, subject to Apple’s device backup and restoration behavior.
             </p>
 
             <h3>Security</h3>
 
             <p>
-                On-device processing is used to reduce the exposure of your documents to external systems. You are responsible for securing your device, backups, shared files, and selected storage destinations.
+                On-device processing reduces the exposure of your documents to external systems. You are responsible for securing your device, backups, shared files, and selected storage destinations.
             </p>
-            
+
+            <h3>Changes to This Privacy Policy</h3>
+
+            <p>
+                This Privacy Policy may be updated when the app’s features or privacy practices change. Any update will be published on this page with a revised “Last updated” date.
+            </p>
+
+            <h3>Contact</h3>
+
+            <p>
+                For questions about this Privacy Policy, contact the developer at <a href="mailto:tavistudio@yahoo.com">tavistudio@yahoo.com</a>.
+            </p>
         </section>
 
 
@@ -451,6 +483,13 @@
 
             <a
                 class="support-email"
+                href="mailto:tavistudio@yahoo.com"
+            >
+                tavistudio@yahoo.com
+            </a>
+
+            <a
+                class="support-email"
                 href="mailto:octavianpetrescu2025@yahoo.com"
             >
                 octavianpetrescu2025@yahoo.com
@@ -459,7 +498,7 @@
 
 
         <footer>
-            © 2026 PDF Fit
+            © 2026 Octavian Petrescu
         </footer>
 
     </main>
